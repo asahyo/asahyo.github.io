@@ -5,13 +5,9 @@
 
     <body>
         <script>
-            var pic;
+            var capture;
             var w = window.innerWidth;
             var h = window.innerHeight;
-
-            function preload(){
-                pic = loadImage("bongbong.png");
-            }
 
             function setup(){
                 createCanvas(w, h, WEBGL);
@@ -22,11 +18,10 @@
             function draw(){
                 background(100)
 
-                texture(pic)
-                image(capture, 0, 0, 320, 240);
+                texture(capture)
                 rotateY(mouseX/10)
                 rotateX(mouseY/100)
-                box(200, 300)
+                torus(70, 40);
             }
 
         </script>
